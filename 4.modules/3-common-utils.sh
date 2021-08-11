@@ -2,17 +2,18 @@
 # This script replaces ubuntu source & upgrade software
 
 if [ -z $SYSTEM_VARIABLES_SOURCED ]; then
-	source include/1-system-variables.sh
+	source ./3.include/1-system-variables.sh
 fi
 
 if [ -z $FORMAT_SOURCED ];then
-	source include/2-format-output.sh
+	source ./3.include/2-format-output.sh
 fi
 
-config=$(cat ./config/1-download-link.json | sed ':a;N;s/[\t\n\ \r]//g;ta')
+config=$(cat ./1.config/1-download-link.json | sed ':a;N;s/[\t\n\ \r]//g;ta')
 
 install_python_pkgs() {
 	sudo apt-get install -yq python3-dev python3-pip libudev-dev
+	# sudo python3 -m pip install --upgrade pip
 	sudo python3 -m pip install -U pip
 }
 
@@ -83,16 +84,8 @@ install_jetbrains_toolbox() {
 }
 
 install_sogou_input() {
-	# sogou link will update after a while, so we can't install use hsitory link.
-	# link=$(extract_json "$config" "sogou-input" "")
-	# if [ -z $link ]; then
-	#	error "Please add sogou-input link to config file!"
-	# fi
-	
-	# sudo wget -O sogou-input.deb $(echo $link | sed -e 's/\"//g')
-	sudo dpkg -i ./assets/sogou-input.deb
+	sudo dpkg -i ./0.assets/4.deb-pkgs/sogou-input.deb
 	sudo apt -f install
-	# sudo rm -rf sogou-input.deb
 }
 
 install_netease_music() {
@@ -107,19 +100,19 @@ install_netease_music() {
 }
 
 case $os in
-Linux*)
-	confirm install_python_pkgs "Install python pip?"
-	confirm install_common_utils "Install common utils?"
-	confirm	install_useful_utils "Install pdf-viewer & gimp?"
-	confirm install_chrome "Install Chrome?"
-	confirm install_typora "Install Typora?"
-	confirm install_wps_office "Install WPS office?"
-	confirm install_vscode "Install VS code?"
-	confirm install_jetbrains_toolbox "Install Jetbrains toolbox"
-	confirm install_sogou_input "Install Sogou input?"
-	confirm install_netease_music "Install Netease music?"
-	;;
-*)
-	error "OS $os is not supported"
+	Linux*)
+		confirm install_python_pkgs "Install python pip?"
+		confirm install_common_utils "Install common utils?"
+		confirm	install_useful_utils "Install pdf-viewer & gimp?"
+		confirm install_chrome "Install Chrome?"
+		confirm install_typora "Install Typora?"
+		confirm install_wps_office "Install WPS office?"
+		confirm install_vscode "Install VS code?"
+		confirm install_jetbrains_toolbox "Install Jetbrains toolbox"
+		confirm install_sogou_input "Install Sogou input?"
+		confirm install_netease_music "Install Netease music?"
+		;;
+	*)
+		error "OS $os is not supported"
 esac
 

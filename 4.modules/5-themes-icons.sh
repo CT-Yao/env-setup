@@ -1,11 +1,11 @@
 #!/bin/bash
 
 if [ -z $SYSTEM_VARIABLES_SOURCED ]; then
-	source include/1-system-variables.sh
+	source ./3.include/1-system-variables.sh
 fi
 
 if [ -z $FORMAT_SOURCED ];then
-	source include/2-format-output.sh
+	source ./3.include/2-format-output.sh
 fi
 
 install_tools() {
@@ -17,7 +17,7 @@ install_tools() {
 }
 
 install_icons(){
-	for file in $(ls ./icons/)
+	for file in $(ls ./0.assets/2.icons/)
 	do
 		sudo tar -xJf ./icons/${file} -C /usr/share/icons/
 	done
@@ -35,14 +35,14 @@ install_icons(){
 }
 
 install_themes(){
-	for file in $(ls ./themes/)
+	for file in $(ls ./0.assets/3.themes/)
 	do
 		sudo tar -xJf ./themes/${file} -C /usr/share/themes/
 	done
 }
 
 change_login_img() {
-	sudo ./assets/change-gdm-background ./wallpapers/wallpaper.jpg
+	sudo ./0.assets/0.misc/change-gdm-background ./0.assets/1.wallpapers/wallpaper.jpg
 }
 
 case $os in

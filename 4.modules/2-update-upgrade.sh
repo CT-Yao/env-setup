@@ -2,11 +2,11 @@
 # This script replaces ubuntu source & upgrade software
 
 if [ -z $SYSTEM_VARIABLES_SOURCED ]; then
-	source include/1-system-variables.sh
+	source ./3.include/1-system-variables.sh
 fi
 
 if [ -z $FORMAT_SOURCED ];then
-	source include/2-format-output.sh
+	source ./3.include/2-format-output.sh
 fi
 
 source_list_path="/etc/apt/sources.list"
@@ -14,6 +14,7 @@ source_list_path="/etc/apt/sources.list"
 use_mirror_source() {
 	status "Backup source.list"
 	sudo cp "$source_list_path" /etc/apt/sources.list.bak
+	sudo mkdir -p ./backup/
 	sudo cp "$source_list_path" ./backup/sources.list
 	
 	if query "Enable all deb repo (include source)"; then

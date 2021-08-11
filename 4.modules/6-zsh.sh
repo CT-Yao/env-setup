@@ -1,11 +1,11 @@
 #!/bin/bash
 
 if [ -z $SYSTEM_VARIABLES_SOURCED ]; then
-	source include/1-system-variables.sh
+	source ./3.include/1-system-variables.sh
 fi
 
 if [ -z $FORMAT_SOURCED ];then
-	source include/2-format-output.sh
+	source ./3.include/2-format-output.sh
 fi
 
 install_zsh() {
