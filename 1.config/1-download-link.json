@@ -1,9 +1,9 @@
 {
-	"wps-office": "https://wdl1.cache.wps.cn/wps/download/ep/Linux2019/10161/wps-office_11.1.0.10161_amd64.deb",
-	"vscode": "https://az764295.vo.msecnd.net/stable/c3f126316369cd610563c75b1b1725e0679adfb3/code_1.58.2-1626302803_amd64.deb",
-	"netease-music": "https://d1.music.126.net/dmusic/netease-cloud-music_1.2.1_amd64_ubuntu_20190428.deb",
-	"sogou-input": "https://ime.sogouimecdn.com/202108011330/f42cebf9b0723de90db396b5a366260f/dl/index/1612260778/sogoupinyin_2.4.0.3469_amd64.deb",
-	"youdao-dict": "http://codown.youdao.com/cidian/linux/youdao-dict_1.1.0-0-ubuntu_amd64.deb",
-	"jetbrains-toolbox": "https://download-cdn.jetbrains.com/toolbox/jetbrains-toolbox-1.21.9547.tar.gz",
-	"chrome": "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
+    "wps-office": "https://wdl1.cache.wps.cn/wps/download/ep/Linux2019/10161/wps-office_11.1.0.10161_amd64.deb",
+    "vscode": "https://az764295.vo.msecnd.net/stable/c3f126316369cd610563c75b1b1725e0679adfb3/code_1.58.2-1626302803_amd64.deb",
+    "netease-music": "https://d1.music.126.net/dmusic/netease-cloud-music_1.2.1_amd64_ubuntu_20190428.deb",
+    "sogou-input": "https://ime.sogouimecdn.com/202108011330/f42cebf9b0723de90db396b5a366260f/dl/index/1612260778/sogoupinyin_2.4.0.3469_amd64.deb",
+    "youdao-dict": "http://codown.youdao.com/cidian/linux/youdao-dict_1.1.0-0-ubuntu_amd64.deb",
+    "jetbrains-toolbox": "https://download-cdn.jetbrains.com/toolbox/jetbrains-toolbox-1.21.9547.tar.gz",
+    "chrome": "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
 }
