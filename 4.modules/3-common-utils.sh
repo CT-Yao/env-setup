@@ -64,7 +64,7 @@ install_wps_office() {
     sudo rm -rf ~/.config/Kingsoft
     sudo rm -rf wps-office.deb
 
-    sudo unzip ./assets/wps-fonts.zip -d /usr/share/fonts/wps-office
+    sudo unzip ./0.assets/5.fonts/wps-fonts.zip -d /usr/share/fonts/wps-office
 }
 
 
