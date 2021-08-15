@@ -23,7 +23,7 @@ fi
 install_zsh() {
     status $(echo $SHELL)
     sudo apt update
-    sudo apt install -y zsh
+    sudo apt install -y zsh autojump
 }
 
 

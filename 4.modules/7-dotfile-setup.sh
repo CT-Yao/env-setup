@@ -30,9 +30,23 @@ set_neovim() {
 }
 
 
+# Zsh Configuration
+set_zsh() {
+    if [[ ! -d ./backup ]]; then
+        mkdir backup
+    fi
+    
+    if [[ -e ~/.zshrc ]]; then
+       cp -f ~/.zshrc ./backup
+    fi
+    
+    cp -f ./2.dotfiles/.zshrc ~/.zshrc
+}
+
 case $os in
     Linux*)
         confirm set_neovim "Set Neovim Configuration?"
+        confirm set_zsh "Set zsh Configuration?"
         ;;
     *)
         echo "OS $os is not supported"
