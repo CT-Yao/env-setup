@@ -1,5 +1,16 @@
 #!/bin/bash
 
+#================================================
+# 5-themes-icons.sh
+# 
+# - Author: Chengtao Yao
+# - Email: chengtao.yao@outlook.com
+# - Last Modified: 2021-08-15 20:34:32 
+#
+# This script installs themes and icons.
+#================================================
+
+# Source system vars and format output script.
 if [ -z $SYSTEM_VARIABLES_SOURCED ]; then
     source ./3.include/1-system-variables.sh
 fi
@@ -8,6 +19,7 @@ if [ -z $FORMAT_SOURCED ];then
     source ./3.include/2-format-output.sh
 fi
 
+# Install gnome tools.
 install_tools() {
     sudo apt install -y gnome-tweak-tool
     sudo apt install -y gnome-shell-extensions 
@@ -16,6 +28,8 @@ install_tools() {
     sudo apt install -y sassc optipng inkscape libcanberra-gtk-module libglib2.0-dev libxml2-utils
 }
 
+
+# Install icons.
 install_icons(){
     for file in $(ls ./0.assets/2.icons/)
     do
@@ -34,6 +48,8 @@ install_icons(){
     sudo apt-get install paper-icon-theme
 }
 
+
+# Install themes.
 install_themes(){
     for file in $(ls ./0.assets/3.themes/)
     do
@@ -41,9 +57,12 @@ install_themes(){
     done
 }
 
+
+# Change login image.
 change_login_img() {
     sudo ./0.assets/0.misc/change-gdm-background ./0.assets/1.wallpapers/wallpaper.jpg
 }
+
 
 case $os in
     Linux*)
