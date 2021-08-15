@@ -11,7 +11,6 @@
 # software.
 #================================================
 
-
 # Source system vars and format output script.
 if [ -z $SYSTEM_VARIABLES_SOURCED ]; then
     source ./3.include/1-system-variables.sh
