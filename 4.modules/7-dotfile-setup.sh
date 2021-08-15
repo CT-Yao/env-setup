@@ -23,9 +23,9 @@ fi
 # Neovim Configuration.
 set_neovim() {
     if [[ -d ~/.config/nvim ]]; then
-        cp -rf ./5.dotfiles/nvim ~/.config/
+        cp -rf ./2.dotfiles/nvim ~/.config/
     else
-        cp -r ./5.dotfiles/nvim ~/.config/
+        cp -r ./2.dotfiles/nvim ~/.config/
     fi
 }
 
