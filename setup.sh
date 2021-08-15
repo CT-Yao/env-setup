@@ -28,4 +28,3 @@ if query "[6] Install zsh?"; then
 	./4.modules/6-zsh.sh
 fi
 
-
