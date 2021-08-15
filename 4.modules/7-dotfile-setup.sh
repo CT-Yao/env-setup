@@ -9,17 +9,17 @@ if [ -z $FORMAT_SOURCED ];then
 fi
 
 set_neovim() {
-	if [[ -d ~/.config/nvim ]]; then
-		cp -rf ./5.dotfiles/nvim ~/.config/
-	else
-		cp -r ./5.dotfiles/nvim ~/.config/
-	fi
+    if [[ -d ~/.config/nvim ]]; then
+        cp -rf ./5.dotfiles/nvim ~/.config/
+    else
+        cp -r ./5.dotfiles/nvim ~/.config/
+    fi
 }
 
 
 case $os in
     Linux*)
-		confirm set_neovim "Set Neovim Configuration?"
+        confirm set_neovim "Set Neovim Configuration?"
         ;;
     *)
         echo "OS $os is not supported"
