@@ -23,10 +23,10 @@ install_oh_my_zsh(){
 
 case $os in
 	Linux*)
-		confirm install_zsh "Install zsh?"
-		confirm install_oh_my_zsh "Install oh-my-zsh?"
-		sudo chsh -s /bin/zsh
-		;;
+        confirm install_zsh "Install zsh?"
+        confirm install_oh_my_zsh "Install oh-my-zsh?"
+        sudo chsh -s /bin/zsh
+        ;;
 	*)
-		echo "OS $os is not supported"
+        echo "OS $os is not supported"
 esac

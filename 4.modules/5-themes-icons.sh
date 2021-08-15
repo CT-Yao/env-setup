@@ -37,21 +37,21 @@ install_icons(){
 install_themes(){
 	for file in $(ls ./0.assets/3.themes/)
 	do
-		sudo tar -xJf ./themes/${file} -C /usr/share/themes/
-	done
+        sudo tar -xJf ./themes/${file} -C /usr/share/themes/
+    done
 }
 
 change_login_img() {
-	sudo ./0.assets/0.misc/change-gdm-background ./0.assets/1.wallpapers/wallpaper.jpg
+    sudo ./0.assets/0.misc/change-gdm-background ./0.assets/1.wallpapers/wallpaper.jpg
 }
 
 case $os in
-	Linux*)
-		confirm install_tools "Install tweak tools?"
-		confirm install_icons "Install icons?"
-		confirm install_themes "Install themes?"
-		confirm change_login_img "Change login image?"
-		;;
+    Linux*)
+        confirm install_tools "Install tweak tools?"
+        confirm install_icons "Install icons?"
+        confirm install_themes "Install themes?"
+        confirm change_login_img "Change login image?"
+        ;;
 	*)
-		echo "OS $os is not supported"
+        echo "OS $os is not supported"
 esac

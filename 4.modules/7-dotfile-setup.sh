@@ -1,11 +1,11 @@
 #!/bin/bash
 
 if [ -z $SYSTEM_VARIABLES_SOURCED ]; then
-        source ./3.include/1-system-variables.sh
+    source ./3.include/1-system-variables.sh
 fi
 
 if [ -z $FORMAT_SOURCED ];then
-        source ./3.include/2-format-output.sh
+    source ./3.include/2-format-output.sh
 fi
 
 set_neovim() {
@@ -18,10 +18,10 @@ set_neovim() {
 
 
 case $os in
-        Linux*)
+    Linux*)
 		confirm set_neovim "Set Neovim Configuration?"
-                ;;
-        *)
-                echo "OS $os is not supported"
+        ;;
+    *)
+        echo "OS $os is not supported"
 esac
 
