@@ -7,7 +7,7 @@
 # - Email: chengtao.yao@outlook.com
 # - Last Modified: 2021-08-15 19:47:13 
 #
-# This script install common utils and software. 
+# This script installs common utils and software. 
 #================================================
 
 # Source system vars and format output script.
