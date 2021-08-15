@@ -5,7 +5,7 @@
 # 
 # - Author: Chengtao Yao
 # - Email: chengtao.yao@outlook.com
-# - Last Modified: 2021-08-15 19:47:13 
+# - Last Modified: 2021-08-15 20:31:46  
 #
 # This script auto removes some softwares. 
 #================================================
