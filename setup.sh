@@ -28,3 +28,7 @@ if query "[6] Install zsh?"; then
 	./4.modules/6-zsh.sh
 fi
 
+if query "[7] Dotfile Setup?"; then
+	./4.modules/7-dotfile-setup.sh
+fi
+
